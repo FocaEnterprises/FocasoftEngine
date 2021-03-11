@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.giverplay.karma">
 
+    <uses-permission
+            android:name="android.permission.INTERNET"
+            android:maxSdkVersion="30" />
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
