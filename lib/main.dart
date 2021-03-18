@@ -26,7 +26,7 @@ class HomePage extends StatefulWidget {
 
   _addIncrement() {
     currentId++;
-    
+
     projectList.add(ProjectItem(
         id: "p$currentId",
         name: "Projeto $currentId",
@@ -71,7 +71,14 @@ class _HomePageState extends State<HomePage> {
         itemBuilder: (BuildContext ctx, int index) {
           final projectItem = widget.projectList[index];
 
-          return Text(projectItem.name);
+          return Card(
+            child: ListTile(
+              leading: Icon(Icons.ac_unit),
+              title: Text(projectItem.name),
+              subtitle: Text(projectItem.description),
+              trailing: Icon(Icons.more_vert),
+            ),
+          );
         },
       ),
       floatingActionButton: FloatingActionButton(
